@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON ITERATION</title>
+</head>
+
+<body>
+    <script>
+        const myDetails = {
+            name: "Katheeja Zuhaira",
+            age: 22,
+            place: "Chennai",
+            course: "Full Stack Development",
+            institute: "GUVI"
+        }
+         
+        //FOR LOOP
+
+        for (let i = 0; i < myDetails.length; i++) {
+            console.log(myDetails[i])// we cannot iterate through for loop since objects can only call by reference keys
+        }
+         
+        //FOR IN 
+
+        for (let key in myDetails) {
+            console.log(key,"=>",myDetails[key]);
+        }
+
+        //FOR EACH
+        let keys = Object.keys(myDetails);
+        let entries = Object.entries(myDetails)  
+        keys.forEach(key => {
+            console.log(key,":",myDetails[key])
+        });
+
+        //FOR OF
+
+        for(let [key,value] of Object.entries(myDetails)){
+            console.log(key,"-->",value);
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>
